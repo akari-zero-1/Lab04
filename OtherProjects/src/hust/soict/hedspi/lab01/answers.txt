@@ -1,0 +1,6 @@
+1.What happens if users choose “Cancel”?
+”: A message box appear and say that “You’ve chosen: NO”
+2.How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do” and “I don’t” (Suggestion: Use Javadocs or using Eclipse/Netbean IDE help). 
+-	Use JOptionPane.showOptionDialog to create a dialog with custom options.
+-	Define the options you want to display.
+-	Handle the user's choice accordingly.
