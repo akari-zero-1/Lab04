@@ -7,7 +7,7 @@ public class Cart {
 
     public static final int MAX_NUMBERS_ORDERED = 20;// so luong toi da trong gio hang
     private float totalCost =0; // tong gia tri gio hang
-    ArrayList<DigitalVideoDisc> itemsOderedList = new ArrayList<DigitalVideoDisc>(MAX_NUMBERS_ORDERED);// mang arraylist luu danh sach cac dia trong gio hang
+    ArrayList<Media> itemsOderedList = new ArrayList<Media>(MAX_NUMBERS_ORDERED);// mang arraylist luu danh sach cac dia trong gio hang
     private int qtyOrdered = 0;// so luong DVD hien co trong gio hang
 
  /**

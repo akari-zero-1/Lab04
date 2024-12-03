@@ -15,17 +15,17 @@ public class Store {
     }
 
     // Phương thức thêm DVD vào cửa hàng
-    public void addDVD(DigitalVideoDisc dvd) {
-        mediaItems.add(dvd);
+    public void addDVD(Media media) {
+        mediaItems.add(media);
         qtyItem++;
         System.out.println("The DVD has been successfully added.");
         System.out.println();
     }
 
     // Phương thức xóa DVD khỏi cửa hàng
-    public void removeDVD(DigitalVideoDisc dvd) {
-        if (mediaItems.contains(dvd)) {
-            mediaItems.remove(dvd);
+    public void removeDVD(Media media) {
+        if (mediaItems.contains(media)) {
+            mediaItems.remove(media);
             qtyItem--;
             System.out.println("DVD has been removed successfully.");
             System.out.println();
