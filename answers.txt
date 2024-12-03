@@ -1,0 +1,19 @@
+1. Lớp nào nên implement giao diện Comparable?
+Lớp đại diện cho các sản phẩm trong giỏ hàng (ví dụ: lớp Media hoặc các lớp con như DVD) nên implement giao diện Comparable. Điều này giúp định nghĩa cách so sánh mặc định cho các đối tượng thuộc lớp đó.
+
+2. Phương thức compareTo() nên được triển khai như thế nào để phản ánh thứ tự mong muốn?
+Phương thức compareTo() nên được viết dựa trên quy tắc sắp xếp mà bạn muốn. Ví dụ:
+Nếu cần sắp xếp theo tiêu đề rồi đến giá, thì so sánh tiêu đề trước. Nếu tiêu đề giống nhau, so sánh theo giá.
+Nếu cần sắp xếp theo giá rồi đến tiêu đề, thì so sánh giá trước. Nếu giá giống nhau, so sánh tiêu đề.
+Cách triển khai sẽ thay đổi tùy thuộc vào yêu cầu sắp xếp.
+
+3. Có thể có hai quy tắc sắp xếp (ví dụ: theo tiêu đề rồi giá, hoặc theo giá rồi tiêu đề) nếu sử dụng Comparable không?
+Không, giao diện Comparable chỉ hỗ trợ một quy tắc sắp xếp duy nhất vì chỉ có một phương thức compareTo() được triển khai.
+Nếu muốn hỗ trợ nhiều quy tắc sắp xếp, cần sử dụng giao diện Comparator, cho phép định nghĩa nhiều bộ so sánh khác nhau.
+
+4. Làm thế nào để áp dụng quy tắc sắp xếp khác cho DVD so với các loại media khác?
+Nếu DVD cần quy tắc sắp xếp riêng (ví dụ: theo tiêu đề, sau đó giảm dần chiều dài, rồi đến giá), có thể:
+Ghi đè phương thức compareTo() trong lớp DVD.
+Trong phương thức này, triển khai quy tắc sắp xếp riêng cho DVD.
+Với các loại media khác, giữ nguyên quy tắc sắp xếp mặc định từ lớp cha.
+Việc này đảm bảo rằng mỗi loại sản phẩm có thể được sắp xếp dựa trên quy tắc riêng mà không ảnh hưởng đến các loại khác.
